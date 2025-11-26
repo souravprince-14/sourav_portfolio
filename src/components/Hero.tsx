@@ -31,6 +31,12 @@ print(me.build_future())`;
     }
   };
 
+  const downloadCV = () => {
+    // Replace with your actual CV URL from Google Drive, Dropbox, or your server
+    const cvUrl = "https://drive.google.com/uc?export=download&id=YOUR_GOOGLE_DRIVE_FILE_ID";
+    window.open(cvUrl, "_blank");
+  };
+
   return (
     <section className="min-h-screen pt-32 pb-16 flex items-center justify-center px-6 md:px-12 relative overflow-hidden">
       {/* Background Elements */}
@@ -79,7 +85,10 @@ print(me.build_future())`;
             >
               View Projects <ChevronRight size={18} />
             </a>
-            <button className="px-6 py-3 border border-slate-700 hover:border-python-yellow text-slate-300 hover:text-python-yellow rounded-lg font-medium transition-colors flex items-center gap-2">
+            <button 
+              onClick={downloadCV}
+              className="px-6 py-3 border border-slate-700 hover:border-python-yellow text-slate-300 hover:text-python-yellow rounded-lg font-medium transition-colors flex items-center gap-2"
+            >
               Download CV <Download size={18} />
             </button>
           </div>

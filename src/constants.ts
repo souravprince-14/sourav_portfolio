@@ -6,12 +6,14 @@ export const PROFILE: Profile = {
   email: "princesourav1425@gmail.com",
   phone: "+91 6204881615",
   summary: "AI Engineer with experience in backend development, Generative AI systems, and cloud-native deployments. Skilled in Python, Flask, FastAPI, Azure, system design, CI/CD, and secure API engineering. Strong ability to build scalable production-grade solutions and collaborate with cross-functional teams.",
-  image: "public/Screenshot 2025-11-26 205812.png", // Replace with your local image path, e.g., "/profile.jpg"
+  image: "https://avatars.githubusercontent.com/u/150000000?v=4",
   social: {
-    github: "https://github.com/",
-    linkedin: "https://linkedin.com/in/"
+    github: "https://github.com/souravprince-14",
+    linkedin: "https://linkedin.com/in/souravprince-14"
   }
 };
+
+export const CV_URL = "https://drive.google.com/file/d/1VA0LhijDvxq0ftffGn1NRCJaPZptEiYF/view?usp=sharing";
 
 export const EXPERIENCE: ExperienceItem[] = [
   {
