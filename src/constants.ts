@@ -2,7 +2,7 @@ import { ExperienceItem, ProjectItem, SkillCategory, EducationItem, Profile } fr
 
 export const PROFILE: Profile = {
   name: "Sourav Prince",
-  title: "AI Engineer & Backend Developer",
+  title: "GenAI Engineer & Backend Developer",
   email: "princesourav1425@gmail.com",
   phone: "+91 6204881615",
   summary: "AI Engineer with experience in backend development, Generative AI systems, and cloud-native deployments. Skilled in Python, Flask, FastAPI, Azure, system design, CI/CD, and secure API engineering. Strong ability to build scalable production-grade solutions and collaborate with cross-functional teams.",
@@ -31,7 +31,7 @@ export const EXPERIENCE: ExperienceItem[] = [
   },
   {
     company: "Chegg India",
-    role: "Subject Matter Expert",
+    role: "Subject Matter Expert (Mathematics)",
     period: "Nov 2021 – Jul 2023",
     location: "Remote",
     description: [
