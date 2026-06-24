@@ -1,6 +1,6 @@
 import React from 'react';
 import { Download, ChevronRight } from 'lucide-react';
-import { PROFILE } from '../constants';
+import { PROFILE, CV_URL } from '../constants';
 import { CodeBlock } from './CodeBlock';
 
 export const Hero: React.FC = () => {
@@ -32,9 +32,7 @@ print(me.build_future())`;
   };
 
   const downloadCV = () => {
-    // Replace with your actual CV URL from Google Drive, Dropbox, or your server
-    const cvUrl = "https://drive.google.com/uc?export=download&id=YOUR_GOOGLE_DRIVE_FILE_ID";
-    window.open(cvUrl, "_blank");
+    window.open(CV_URL, "_blank");
   };
 
   return (
