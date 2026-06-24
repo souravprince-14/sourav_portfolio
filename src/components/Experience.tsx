@@ -35,12 +35,27 @@ export const Experience: React.FC = () => {
                 </div>
                 
                 <ul className="space-y-3">
-                  {job.description.map((point, idx) => (
-                    <li key={idx} className="flex gap-3 text-slate-300 text-sm leading-relaxed group/item hover:text-white transition-colors">
-                      <span className="text-slate-600 mt-1.5 font-mono text-xs">{">"}</span>
-                      {point}
-                    </li>
-                  ))}
+                  {job.description.map((point, idx) => {
+                    const colonIndex = point.indexOf(':');
+                    if (colonIndex !== -1) {
+                      const prefix = point.substring(0, colonIndex);
+                      const suffix = point.substring(colonIndex + 1);
+                      return (
+                        <li key={idx} className="flex gap-3 text-slate-300 text-sm leading-relaxed group/item hover:text-white transition-colors">
+                          <span className="text-slate-600 mt-1.5 font-mono text-xs">{">"}</span>
+                          <span>
+                            <strong className="text-slate-200 font-semibold">{prefix}</strong>:{suffix}
+                          </span>
+                        </li>
+                      );
+                    }
+                    return (
+                      <li key={idx} className="flex gap-3 text-slate-300 text-sm leading-relaxed group/item hover:text-white transition-colors">
+                        <span className="text-slate-600 mt-1.5 font-mono text-xs">{">"}</span>
+                        {point}
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             </div>

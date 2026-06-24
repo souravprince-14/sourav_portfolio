@@ -24,11 +24,23 @@ export const Projects: React.FC = () => {
             <p className="text-sm text-slate-500 mb-6 font-mono">{project.subtitle}</p>
 
             <div className="flex-grow space-y-3 mb-6">
-              {project.points.slice(0, 3).map((point, idx) => (
-                <p key={idx} className="text-sm text-slate-400 line-clamp-2">
-                   • {point.split(':')[1] || point}
-                </p>
-              ))}
+              {project.points.map((point, idx) => {
+                const colonIndex = point.indexOf(':');
+                if (colonIndex !== -1) {
+                  const prefix = point.substring(0, colonIndex);
+                  const suffix = point.substring(colonIndex + 1);
+                  return (
+                    <p key={idx} className="text-sm text-slate-400 leading-relaxed">
+                      • <strong className="text-slate-200 font-semibold">{prefix}</strong>:{suffix}
+                    </p>
+                  );
+                }
+                return (
+                  <p key={idx} className="text-sm text-slate-400 leading-relaxed">
+                    • {point}
+                  </p>
+                );
+              })}
             </div>
 
             <div className="flex flex-wrap gap-2 mt-auto">
