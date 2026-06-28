@@ -6,6 +6,15 @@ export interface ExperienceItem {
   description: string[];
 }
 
+// export interface AchievementItem {
+//   title: string;
+//   issuer: string;
+//   date: string;
+//   description?: string;
+//   category: 'award' | 'certification' | 'recognition';
+//   certificateUrl?: string;
+// }
+
 export interface ProjectItem {
   title: string;
   subtitle: string;

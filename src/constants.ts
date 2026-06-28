@@ -15,6 +15,33 @@ export const PROFILE: Profile = {
 
 export const CV_URL = "/Sourav_Prince.pdf";
 
+// export const ACHIEVEMENTS: AchievementItem[] = [
+//   {
+//     title: "GDS User Recognition",
+//     issuer: "Ernst & Young (EY GDS)",
+//     date: "17 Sep 2024",
+//     description: "It gives me immense pride to recognize your dedication and perseverance that contributed to EY's success. The efforts you put in are truly commendable and it has meaningfully contributed to driving client centricity as part of our NextWave ambition. Thank you for everything you do to help us build a better working world.",
+//     category: "recognition",
+//     certificateUrl: "/Awards/Sourav K Prince_2024-09-17T04_53_06.8191776Z.pdf"
+//   },
+//   {
+//     title: "Achiever Extraordinaire",
+//     issuer: "Ernst & Young (EY GDS)",
+//     date: "17 Oct 2025",
+//     description: "Awarded the Achiever Extraordinaire recognition for exceptional performance and outstanding contributions at EY GDS.",
+//     category: "award",
+//     certificateUrl: "/Awards/E-Certificate (1).pdf"
+//   },
+//   {
+//     title: "Achiever Extraordinaire",
+//     issuer: "Ernst & Young (EY GDS)",
+//     date: "22 Oct 2025",
+//     description: "Awarded the Achiever Extraordinaire recognition for sustained excellence and impactful contributions at EY GDS.",
+//     category: "award",
+//     certificateUrl: "/Awards/E-Certificate (2).pdf"
+//   }
+// ];
+
 export const EXPERIENCE: ExperienceItem[] = [
   {
     company: "EY GDS",
@@ -41,7 +68,7 @@ export const EXPERIENCE: ExperienceItem[] = [
 ];
 
 export const PROJECTS: ProjectItem[] = [
-    {
+  {
     title: "Automated Business Reporting",
     subtitle: "AI-Powered Cost Analytics Platform - EY GDS",
     period: "2024",

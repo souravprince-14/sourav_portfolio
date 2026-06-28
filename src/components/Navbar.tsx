@@ -15,6 +15,7 @@ export const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: 'About', href: '#about' },
+    // { name: 'Achievements', href: '#achievements' },
     { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
     { name: 'Skills', href: '#skills' },
@@ -24,7 +25,7 @@ export const Navbar: React.FC = () => {
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     setIsOpen(false);
-    
+
     if (href === '#') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
@@ -46,8 +47,8 @@ export const Navbar: React.FC = () => {
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-slate-950/90 backdrop-blur-md border-b border-slate-800 py-4' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
-        <a 
-          href="#" 
+        <a
+          href="#"
           onClick={(e) => scrollToSection(e, '#')}
           className="flex items-center gap-2 text-xl font-bold text-slate-100 group"
         >
@@ -58,17 +59,17 @@ export const Navbar: React.FC = () => {
         {/* Desktop Nav */}
         <div className="hidden md:flex gap-8">
           {navLinks.map((link) => (
-            <a 
-              key={link.name} 
-              href={link.href} 
+            <a
+              key={link.name}
+              href={link.href}
               onClick={(e) => scrollToSection(e, link.href)}
               className="text-slate-400 hover:text-python-yellow transition-colors font-mono text-sm"
             >
               {link.name}
             </a>
           ))}
-          <a 
-            href="#contact" 
+          <a
+            href="#contact"
             onClick={(e) => scrollToSection(e, '#contact')}
             className="px-4 py-2 text-sm font-medium bg-python-blue/10 text-python-blue border border-python-blue/50 rounded hover:bg-python-blue/20 transition-all"
           >
@@ -77,7 +78,7 @@ export const Navbar: React.FC = () => {
         </div>
 
         {/* Mobile Toggle */}
-        <button 
+        <button
           className="md:hidden text-slate-300"
           onClick={() => setIsOpen(!isOpen)}
         >
@@ -89,8 +90,8 @@ export const Navbar: React.FC = () => {
       {isOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-slate-900 border-b border-slate-800 py-4 px-6 flex flex-col gap-4 shadow-xl">
           {navLinks.map((link) => (
-            <a 
-              key={link.name} 
+            <a
+              key={link.name}
               href={link.href}
               onClick={(e) => scrollToSection(e, link.href)}
               className="text-slate-300 hover:text-python-yellow py-2 block"
@@ -98,8 +99,8 @@ export const Navbar: React.FC = () => {
               {link.name}
             </a>
           ))}
-          <a 
-            href="#contact" 
+          <a
+            href="#contact"
             onClick={(e) => scrollToSection(e, '#contact')}
             className="text-python-blue font-semibold block py-2"
           >
